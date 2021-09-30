@@ -1,0 +1,1349 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="All you AWS Training notes in 1 place!">
+      
+      
+      
+      
+        <link rel="canonical" href="https://hasanaburayyan.github.io/aws-cert-training/associate/developer/dynamodb/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>DynamoDB - AWS Certificate Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dynamodb" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AWS Certificate Training" class="md-header__button md-logo" aria-label="AWS Certificate Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Certificate Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DynamoDB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/hasanaburayyan/aws-cert-training/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AWS Certificate Training" class="md-nav__button md-logo" aria-label="AWS Certificate Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AWS Certificate Training
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/hasanaburayyan/aws-cert-training/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Lets Get Certified
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        AWS Practitioner
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="AWS Practitioner" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          AWS Practitioner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/advantages-of-cloud/" class="md-nav__link">
+        Advantages Of Cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/support-plans/" class="md-nav__link">
+        Support Plans
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/zones-and-regions/" class="md-nav__link">
+        Zones And Regions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      <label class="md-nav__link" for="__nav_2_4">
+        Intro To
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Intro To" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Intro To
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/ec2/" class="md-nav__link">
+        EC2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/ebs/" class="md-nav__link">
+        EBS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/s3/" class="md-nav__link">
+        S3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/cloudfront/" class="md-nav__link">
+        Cloud Front
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/databases/" class="md-nav__link">
+        Databases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/elastic-beanstalk/" class="md-nav__link">
+        Elastic Beanstalk
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/lightsail/" class="md-nav__link">
+        Light Sail
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/load-balancers/" class="md-nav__link">
+        Load Balancers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/route53/" class="md-nav__link">
+        Route 53
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/cloudwatch/" class="md-nav__link">
+        Cloudwatch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/waf/" class="md-nav__link">
+        WAF
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/cloudformation/" class="md-nav__link">
+        Cloud Formation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../practitioner/exam-tip/" class="md-nav__link">
+        Exam Tips
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        AWS Certified Developer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="AWS Certified Developer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AWS Certified Developer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Services
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Services" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Services
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iam/" class="md-nav__link">
+        IAM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ec2/" class="md-nav__link">
+        EC2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ebs/" class="md-nav__link">
+        EBS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s3/" class="md-nav__link">
+        S3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elb/" class="md-nav__link">
+        ELB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-gateway/" class="md-nav__link">
+        API Gateway
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloudfront/" class="md-nav__link">
+        CouldFront
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DynamoDB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        DynamoDB
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-primary-keys" class="md-nav__link">
+    Dynamodb Primary Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-access-control" class="md-nav__link">
+    Dynamodb Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexies" class="md-nav__link">
+    Indexies
+  </a>
+  
+    <nav class="md-nav" aria-label="Indexies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexies-exam-tips" class="md-nav__link">
+    Indexies Exam Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-scan-vs-query-api-calls" class="md-nav__link">
+    Dynamodb Scan vs Query API Calls
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamodb Scan vs Query API Calls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan" class="md-nav__link">
+    Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-or-scan" class="md-nav__link">
+    Query Or Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan-and-query-exam-tips" class="md-nav__link">
+    Scan and Query exam tips
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-provisioned-throughput" class="md-nav__link">
+    DynamoDb Provisioned Throughput
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDb Provisioned Throughput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioned-throughput-exam-tips" class="md-nav__link">
+    Provisioned Throughput Exam Tips
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-ondemand-capacity" class="md-nav__link">
+    DynamoDB OnDemand Capacity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-accelerator-dax" class="md-nav__link">
+    DynamoDB Accelerator (DAX)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticache-with-dynamodb" class="md-nav__link">
+    Elasticache with DynamoDB
+  </a>
+  
+    <nav class="md-nav" aria-label="Elasticache with DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dax-vs-elasticache" class="md-nav__link">
+    DAX vs Elasticache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-transactions" class="md-nav__link">
+    DynamoDB Transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-ttl" class="md-nav__link">
+    DynamoDB TTL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-streams" class="md-nav__link">
+    DynamoDB Streams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioned-throughput-exceeded-exception" class="md-nav__link">
+    Provisioned Throughput Exceeded Exception
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exponential-backoff" class="md-nav__link">
+    Exponential Backoff
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kms/" class="md-nav__link">
+        KMS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lambda/" class="md-nav__link">
+        Lambda
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rds/" class="md-nav__link">
+        Relational Databases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../route53/" class="md-nav__link">
+        Route 53
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serverless/" class="md-nav__link">
+        Serverless
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../step-functions/" class="md-nav__link">
+        Step Functions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xray/" class="md-nav__link">
+        X-Ray
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/hasanaburayyan/aws-cert-training/edit/master/docs/associate/developer/dynamodb.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="dynamodb">Dynamodb</h1>
+<ul>
+<li>Dynamodb is a fast and flexible NoSQL</li>
+<li>Designed for apps that need single-digit millisecond latency at any scale</li>
+<li>Full managed databse that supports both document and key-value data models</li>
+<li>Has flexible data model and reliable performance</li>
+<li>Great fit for mobile, web, gaming, ad-tech, IoT applicaitons</li>
+<li>Dynamodb is serverless and scalable</li>
+<li>Backed by SSD Storage</li>
+<li>Spread accross 3 geographically distinc data centers</li>
+<li>Choice of 2 consitency models:</li>
+<li>Eventual consistent Reads (Default)<ul>
+<li>Consistency across all copies of data that is usually reached within a second</li>
+</ul>
+</li>
+<li>Strongly consistent Reads<ul>
+<li>Returns a result that reflects all writes that received a successful response prior to the read</li>
+</ul>
+</li>
+<li>Dynamodb make up:</li>
+<li>Tables</li>
+<li>Items (think row in table)</li>
+<li>Attribute (Think Column of table)</li>
+<li>Key (identifier for data)</li>
+<li>Value (actual data)</li>
+<li>Documents can be written in JSON, HTML, XML</li>
+</ul>
+<h2 id="dynamodb-primary-keys">Dynamodb Primary Keys</h2>
+<ul>
+<li>Dynamodb stores and retrieves data based on Primary Key</li>
+<li>Two types of primary keys</li>
+<li>Partition Key<ul>
+<li>Unique attribute (example user ID)</li>
+<li>Value of partition key is input to internal hash function which determines the partion or physical location on which the data is stored</li>
+<li>If using partition key as your primary key, then no two items can have the same partition key</li>
+</ul>
+</li>
+<li>Composite Key (Partition Key + Sort Key) in combination. Same user posting mutiple times in forum<ul>
+<li>Primary key would be COmposite Key consisting of:</li>
+<li>Partition Key - User ID</li>
+<li>Sort key - Timestamp of the post</li>
+<li>2 items may have the same partition key but they must have a different Sort key</li>
+<li>All items with same Partition Key are stored together, then sorted according to the sort key value</li>
+<li>Allows you to store multiple items with the same Partition Key</li>
+</ul>
+</li>
+</ul>
+<h2 id="dynamodb-access-control">Dynamodb Access Control</h2>
+<ul>
+<li>Authentication and Access Control managed using AWS IAM</li>
+<li>Create an IAM user within your AWS accoun which has specific permissions to access and create DynamoDB tables</li>
+<li>Create IAM role which can enable you to obtain temporary access keys</li>
+<li>Can create special IAM condition to restrict user access to only their records.</li>
+</ul>
+<h2 id="exam-tips">Exam Tips</h2>
+<ul>
+<li>Low latency</li>
+<li>Supports both document and key value data models</li>
+<li>JSON, HTML, XML</li>
+<li>2 types of primary key</li>
+<li>Partion key</li>
+<li>Composite Key (Partition + Sort Keys)</li>
+<li>Consistency models</li>
+<li>Strongly Consitent</li>
+<li>Eventually Consistent</li>
+</ul>
+<h2 id="indexies">Indexies</h2>
+<ul>
+<li>2 types of indexes supported to help speed up queries</li>
+<li>Local Secondary Index<ul>
+<li>Can only be created when creating table</li>
+<li>Cannot be added or modified later</li>
+<li>Has same partition key as table</li>
+<li>Has different sort key than table</li>
+<li>ANy queries based on this sort Key are much faster than using the index than the main table</li>
+</ul>
+</li>
+<li>Global Secondary Index<ul>
+<li>Much more flexible</li>
+<li>Create index whenever you like</li>
+<li>Choose different partion key and sort key to original table</li>
+<li>Speeds up any queries relating to this alternative partion and sort key</li>
+</ul>
+</li>
+</ul>
+<h3 id="indexies-exam-tips">Indexies Exam Tips</h3>
+<ul>
+<li>Indexies enable faster queries on data</li>
+<li>Gives different view of your data based on alternative Partion / Sort keys</li>
+<li>Differences in 2 indexies</li>
+<li>Local created at table creation. Same partion different sort</li>
+<li>Global secondary created whenever and has different partion and different sort keys</li>
+</ul>
+<h2 id="dynamodb-scan-vs-query-api-calls">Dynamodb Scan vs Query API Calls</h2>
+<h3 id="query">Query</h3>
+<ul>
+<li>A query is operation that finds items in your table based on primary key attribute and distinct value to search for</li>
+<li>If looking for user with ID of 212 then you would query based off primary user ID and value 212</li>
+<li>This will select all attributes for document</li>
+<li>Can use optional sort key name and value to refine results</li>
+<li>By default query returns all attributes for item</li>
+<li>ProjectionExpression parameter will allow you to specify what attributes should be return</li>
+<li>Results always sorted by sort key</li>
+<li>Numeric order by default in ascending order (1,2,3,4)</li>
+<li>Can reverse order by setting ScanIndexForward (Tricky because this is for Query not SCAN!) paramerte to false</li>
+<li>By default Queries are eventually consistent</li>
+<li>Can be explicitly set for Stongly consistent</li>
+</ul>
+<h3 id="scan">Scan</h3>
+<ul>
+<li>A scan operation examines ever item in the table</li>
+<li>By default returns all data attributes</li>
+<li>Can also use ProjectionExpression parameter to set what attributes to return</li>
+<li>Can filter results of scan after they have been run</li>
+</ul>
+<h3 id="query-or-scan">Query Or Scan</h3>
+<ul>
+<li>Query is more efficient than Scan</li>
+<li>Scan dumps the entire table then filters out the values to provide</li>
+<li>Scans take longer the larger the table gets</li>
+<li>Scan operation on a large table can use up the provisioned throughput for a table in just one single operation</li>
+<li>You can reduce impact of query or scan by setting smaller page size</li>
+<li>could set page size to 40<ul>
+<li>larger number of operations with smaller size each</li>
+</ul>
+</li>
+<li>Avoid using scan operations if you can</li>
+<li>design tables in a way that you can use the query, GET, or BatchGetItem APIs</li>
+<li>By default scan operation processes data sequentially then returns in 1 MB incements</li>
+<li>only scans one partition at a time</li>
+<li>Can configure scan to run in parrallel if you divide a table or index into segments</li>
+</ul>
+<h3 id="scan-and-query-exam-tips">Scan and Query exam tips</h3>
+<ul>
+<li>Query operation finds items in table using only the primary key attribute</li>
+<li>You provide the primary key name and distinct value to search</li>
+<li>Scan operation examines every item in the table</li>
+<li>Both return all data attributes by default</li>
+<li>Use ProjectionExpression parameter to refine results</li>
+<li>Query results alwasy sorted by Sort key</li>
+<li>Sorted in ascending order</li>
+<li>Set ScanIndexForward parameter to false to reverser the order (QUERIES ONLY)</li>
+<li>Query operation is generally more efficient than scan</li>
+<li>Reduce page size to make scan more efficient</li>
+<li>Can make parrallel scan</li>
+<li>Design tables to use query, GET, or BatchGetItem APIs</li>
+</ul>
+<h3 id="dynamodb-provisioned-throughput">DynamoDb Provisioned Throughput</h3>
+<ul>
+<li>Throughput measured in capacity Units</li>
+<li>Two Types of Capacity Units</li>
+<li>Write Capacity Unit<ul>
+<li>1 x Write Capacity Unit = 1 x 1KB Write per second</li>
+</ul>
+</li>
+<li>Read Capacity Unit<ul>
+<li>1 x Read Capacity Unit = 1 x Strongly Consistent Read of 4KB per second OR 2 x Eventually Consistent Reads of 4KB per second (DEFAULT)</li>
+</ul>
+</li>
+<li>If application reads or writes large objects it will cost more</li>
+</ul>
+<h4 id="provisioned-throughput-exam-tips">Provisioned Throughput Exam Tips</h4>
+<ul>
+<li>Provisioned throughput is measured in capacity units</li>
+<li>1 x Write Capacity = 1 x 1KB Write per second</li>
+<li>1 x Read Capacity Unit = 1 x Strongly Consistent Read of 4KB per second OR 2 x Eventually Consistent Reads of 4KB per second (DEFAULT)</li>
+<li>When Calculating take number of reads or writes a second multiply that by the size per operation / the per second of operation rounded up.</li>
+</ul>
+<h2 id="dynamodb-ondemand-capacity">DynamoDB OnDemand Capacity</h2>
+<ul>
+<li>New Pricing option</li>
+<li>Chareges apply for Reading, Writing, and Storing data</li>
+<li>Do not need to specify Read and Write capacity</li>
+<li>Will scale up and down based on read and writes to your database</li>
+<li>Ideal for unpredictable workloads</li>
+<li>Allows you to pay for only what you use (pay per request)</li>
+</ul>
+<h2 id="dynamodb-accelerator-dax">DynamoDB Accelerator (DAX)</h2>
+<ul>
+<li>Fully managed clustered in-memory cache for DynamoDB</li>
+<li>ONLY FOR READ operations</li>
+<li>Delivers up to 10x read performance</li>
+<li>Microsecond performance for millions of requests per second</li>
+<li>
+<p>Ideal for Read-Heavy and bursty workloads</p>
+</li>
+<li>
+<p>How does it work</p>
+</li>
+<li>DAX is write-through caching service<ul>
+<li>When data is written to dynamodb it is also written to DAX</li>
+<li>Point Dynamodb API Calls to DAX cluster</li>
+<li>If item is in DAX it will be returned from DAX</li>
+<li>If item does not exist then DAX will retrieve item from DynamoDB and write it in cache for further requests</li>
+</ul>
+</li>
+<li>
+<p>Allows ability to reduce Provisioned Read Capacity</p>
+</li>
+<li>
+<p>Not GOOD for</p>
+</li>
+<li>Caters ONLY for Eventually consitent reads<ul>
+<li>CANNOT do Strongly Consitent</li>
+</ul>
+</li>
+<li>Write intensive</li>
+<li>Applications that do not perform many read operations</li>
+<li>Applications that dont require microsecond response times</li>
+</ul>
+<h2 id="elasticache-with-dynamodb">Elasticache with DynamoDB</h2>
+<ul>
+<li>In memory caching that sits infront of many RDS databases</li>
+<li>This can also sit infront of Dynamodb</li>
+<li>Sits between application and database</li>
+<li>Takes load off database</li>
+<li>good if your database is particularly read-heavy and the data is not changing frequently</li>
+<li>Supports Memcached and Redis</li>
+<li>2 Stategies available</li>
+<li>Lazy Loading<ul>
+<li>Loads data into cache only when necessary</li>
+<li>if requested data is in cache Elasticache returns data to application</li>
+<li>If not in cache or has expired Elasticache returns a null</li>
+<li>Application then fetches data from the database and writes the data recieved into cache so that is available next time</li>
+<li>Advantages:</li>
+<li>Only requested data cached</li>
+<li>Node failures are not fatal</li>
+<li>Disadvantages:</li>
+<li>Cache miss penalty (initial request query to database and write data after done)</li>
+<li>Stale data - if data is only updated when cache is updated it can become out of date and does not automatically update</li>
+<li>Time To Live (TTL)</li>
+<li>How to deal with stale data</li>
+<li>Sets a number of seconds until data expires</li>
+<li>Hits on expired data will be treated as miss</li>
+</ul>
+</li>
+<li>Write-Through<ul>
+<li>adds or updates data to cache whenever data is written to database</li>
+<li>Advantages:</li>
+<li>Data is never stale</li>
+<li>Users are generally more tolerant of additional latency when updating data than when retrieving it</li>
+<li>Disadvantages</li>
+<li>Does invoke write penalty for having to write twice</li>
+<li>If node fails and new one is spun up data is missing until added or updated<ul>
+<li>This can be mitigated by implementing lazy loading in conjucture with write-through)</li>
+</ul>
+</li>
+<li>Wasted resources if most of data is never read</li>
+</ul>
+</li>
+</ul>
+<h3 id="dax-vs-elasticache">DAX vs Elasticache</h3>
+<ul>
+<li>DAX optimized just for DynamoDB</li>
+<li>DAX ONLY supports Write-Through</li>
+<li>If you need lazy loading you have to use Elasticache</li>
+</ul>
+<h2 id="dynamodb-transactions">DynamoDB Transactions</h2>
+<ul>
+<li>DynamoDB Transactions were designed for mission critical operations</li>
+<li>Transactions</li>
+<li>ACID Transactions (Atomic, Consitent, Isolated, Durable)</li>
+<li>Read or write multiple items across multiple tables as an all or nothing operation</li>
+<li>Check for a pre-requisite condition before writing to a table</li>
+<li>Implement complex business logic into single atomic transaction</li>
+</ul>
+<h2 id="dynamodb-ttl">DynamoDB TTL</h2>
+<ul>
+<li>DynamoDB Time To Live (TTL)</li>
+<li>Time To Live is attribute that defines an expiry time for your data</li>
+<li>Expired items marked for deletion</li>
+<li>If data is marked it will be deleted with in 48 hours</li>
+<li>Good for removing irrelevant or old data</li>
+<li>Session data</li>
+<li>Event Logs</li>
+<li>Temporary data</li>
+<li>Reduce cost by removing data no longer relevant</li>
+<li>TTL is expressed as epoch/unix time</li>
+<li>numeric value represents the number of seconds that have elapsed since 12am January 1 1970</li>
+<li>When current time is greater than TTL the item will become expired and marked for deletion</li>
+<li>You can filter out expired items from your queries and scans</li>
+<li>This is useful because deletes can take 48 hours</li>
+</ul>
+<h2 id="dynamodb-streams">DynamoDB Streams</h2>
+<ul>
+<li>Streams are Time-ordered sequence of itme level modifications (insert, update, delete)</li>
+<li>Logs are encrypted at rest and stored for 24 hours</li>
+<li>Accessed using a dedicated endpoint</li>
+<li>By default the Primary key is recorded</li>
+<li>Before and After images can be captured</li>
+<li>Used for triggers</li>
+<li>Accessed through their own endpoints</li>
+<li>Events are recorded in near real time</li>
+<li>Really good for serverless and lambda</li>
+<li>Application can take actions based on content</li>
+<li>Lambda can pull stream and trigger events based on stream events</li>
+</ul>
+<h2 id="provisioned-throughput-exceeded-exception">Provisioned Throughput Exceeded Exception</h2>
+<ul>
+<li>Will see this if your request read/write capacity provisioned is exceeded for DynamoDB table</li>
+<li>SDK will autoretry until successful</li>
+<li>If not using SDK<ul>
+<li>Reduce request frequency</li>
+<li>Implement Exponetial backoff</li>
+</ul>
+</li>
+</ul>
+<h2 id="exponential-backoff">Exponential Backoff</h2>
+<ul>
+<li>Components in network can generate errors due to being overloaded</li>
+<li>Usally dealt with by implementing retries (which SDK does)</li>
+<li>In addition to reties SDK also uses exponential Backoff</li>
+<li>Progressively longer waits between consecutive retries (50 ms, 100 ms, 200ms)</li>
+<li>if after 1 minute does not work, your request size may be exceeding the throughput for read/write capacity</li>
+<li>Exponential backoff is used for more than Dynamodb. Every feature of AWS SDK.</li>
+<li>Applies to many services in AWS<ul>
+<li>S3</li>
+<li>CloudFormation</li>
+<li>SES</li>
+</ul>
+</li>
+<li>If not using SDK will need to implement this yourself in the application</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../cloudfront/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CouldFront" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CouldFront
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../kms/" class="md-footer__link md-footer__link--next" aria-label="Next: KMS" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              KMS
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>
