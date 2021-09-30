@@ -25,6 +25,7 @@ nav:
       - Light Sail: 'practitioner/lightsail.md'
       - Load Balancers: 'practitioner/load-balancers.md'
       - Route 53: 'practitioner/route53.md'
+      - Cloudwatch: 'practitioner/cloudwatch.md'
       - WAF: 'practitioner/waf.md'
     - Cloud Formation: 'practitioner/cloudformation.md'
     - Tags: 'practitioner/tags.md'
