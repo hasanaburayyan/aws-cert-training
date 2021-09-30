@@ -1,1 +1,20 @@
-site_name: My Docs
+site_name: AWS Certificate Training
+site_url: https://hasanaburayyan.github.io/aws-cert-training
+site_description: All you AWS Training notes in 1 place!
+repo_url: https://github.com/hasanaburayyan/aws-cert-training
+theme:
+    name: material
+nav: 
+  - 'index.md'
+  - 'practitioner/practitioner-notes.md'
+  - 'associate/developer/developer-notes.md'
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - attr_list
