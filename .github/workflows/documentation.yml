@@ -19,6 +19,6 @@ jobs:
           git config user.name "Automation"
           git config user.email "github-actions@github.com"
       - name: Install dependencies
-        run: pip install --force-reinstall mkdocs && pip --force-reinstall install mkdocs-material 
+        run: pip install --force-reinstall mkdocs mkdocs-material 
       - name: Github Pages Release
         run: mkdocs build && mkdocs gh-deploy
