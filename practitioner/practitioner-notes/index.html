@@ -1,0 +1,1757 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="All you AWS Training notes in 1 place!">
+      
+      
+      
+      
+        <link rel="canonical" href="https://hasanaburayyan.github.io/aws-cert-training/practitioner/practitioner-notes/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>AWS Practitioner Notes - AWS Certificate Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aws-practitioner-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Certificate Training" class="md-header__button md-logo" aria-label="AWS Certificate Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Certificate Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AWS Practitioner Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/hasanaburayyan/aws-cert-training/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Certificate Training" class="md-nav__button md-logo" aria-label="AWS Certificate Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AWS Certificate Training
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/hasanaburayyan/aws-cert-training/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Lets Get Certified
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AWS Practitioner Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        AWS Practitioner Notes
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#six-advantages-of-cloud-computing" class="md-nav__link">
+    Six Advantages Of Cloud Computing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-as-a-service" class="md-nav__link">
+    Infrastructure As A Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-as-a-service" class="md-nav__link">
+    Platform As A Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-as-a-service" class="md-nav__link">
+    Software As A Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-computing-deployment-types" class="md-nav__link">
+    Cloud Computing Deployment Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Computing Deployment Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-high-level-services-of-note" class="md-nav__link">
+    AWS - High Level Services Of Note*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zones-and-regions" class="md-nav__link">
+    Zones and Regions
+  </a>
+  
+    <nav class="md-nav" aria-label="Zones and Regions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-the-right-aws-region" class="md-nav__link">
+    Choosing the right AWS region
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-plans" class="md-nav__link">
+    Support Plans
+  </a>
+  
+    <nav class="md-nav" aria-label="Support Plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developer" class="md-nav__link">
+    Developer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business" class="md-nav__link">
+    Business
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprise" class="md-nav__link">
+    Enterprise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-s3" class="md-nav__link">
+    What is S3
+  </a>
+  
+    <nav class="md-nav" aria-label="What is S3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-service-storage-s3" class="md-nav__link">
+    Simple Service Storage (S3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Service Storage (S3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-need-to-know-exam-tips" class="md-nav__link">
+    S3 NEED TO KNOW Exam Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="S3 NEED TO KNOW Exam Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-has-the-following-features" class="md-nav__link">
+    S3 has the following features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-storage-classes" class="md-nav__link">
+    S3 Storage Classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-you-charged-for-with-s3" class="md-nav__link">
+    What are you charged for with S3?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-transfer-acceleration" class="md-nav__link">
+    S3 Transfer Acceleration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricting-access-in-s3" class="md-nav__link">
+    Restricting ACCESS in S3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cloudfront" class="md-nav__link">
+    What is CloudFront
+  </a>
+  
+    <nav class="md-nav" aria-label="What is CloudFront">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-distributions" class="md-nav__link">
+    Types of distributions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2-elastic-compute-cloud" class="md-nav__link">
+    EC2 Elastic Compute Cloud
+  </a>
+  
+    <nav class="md-nav" aria-label="EC2 Elastic Compute Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec2-pricing-models" class="md-nav__link">
+    EC2 Pricing Models
+  </a>
+  
+    <nav class="md-nav" aria-label="EC2 Pricing Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#silly-acronym-to-remember-ec2-types-fight-dr-mcpxz" class="md-nav__link">
+    Silly Acronym To Remember EC2 Types : FIGHT DR MCPXZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-ebs" class="md-nav__link">
+    What is EBS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancers" class="md-nav__link">
+    Load Balancers
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Balancers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-load-balancers" class="md-nav__link">
+    Application Load Balancers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-load-balancers" class="md-nav__link">
+    Network Load Balancers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classic-load-balancers" class="md-nav__link">
+    Classic Load Balancers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    Databases
+  </a>
+  
+    <nav class="md-nav" aria-label="Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-relational-database-on-aws" class="md-nav__link">
+    NON-Relational Database on AWS
+  </a>
+  
+    <nav class="md-nav" aria-label="NON-Relational Database on AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-transaction-processing-oltp" class="md-nav__link">
+    Online Transaction Processing (OLTP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-analytics-processing-olap" class="md-nav__link">
+    Online Analytics Processing (OLAP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-warehouse" class="md-nav__link">
+    Data-warehouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticache" class="md-nav__link">
+    ElastiCache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route-53" class="md-nav__link">
+    Route 53
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-beanstalk" class="md-nav__link">
+    Elastic BeanStalk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudformation" class="md-nav__link">
+    CloudFormation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightsail" class="md-nav__link">
+    Lightsail
+  </a>
+  
+    <nav class="md-nav" aria-label="Lightsail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#popular-exam-questions" class="md-nav__link">
+    POPULAR EXAM QUESTIONS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-database" class="md-nav__link">
+    Graph database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-services" class="md-nav__link">
+    Global Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwatch" class="md-nav__link">
+    Cloudwatch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capex-vs-opex" class="md-nav__link">
+    CAPEX vs. OPEX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-policies" class="md-nav__link">
+    Pricing Policies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-drivers-of-cost-with-aws" class="md-nav__link">
+    Fundamental Drivers Of Cost With AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-free-services" class="md-nav__link">
+    AWS FREE Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2-pricing" class="md-nav__link">
+    EC2 Pricing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-cost-explorer" class="md-nav__link">
+    AWS Cost Explorer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-waf-aws-shield" class="md-nav__link">
+    AWS WAF &amp; AWS Shield
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../associate/developer/developer-notes/" class="md-nav__link">
+        AWS Associate Developer Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#six-advantages-of-cloud-computing" class="md-nav__link">
+    Six Advantages Of Cloud Computing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-as-a-service" class="md-nav__link">
+    Infrastructure As A Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-as-a-service" class="md-nav__link">
+    Platform As A Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-as-a-service" class="md-nav__link">
+    Software As A Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-computing-deployment-types" class="md-nav__link">
+    Cloud Computing Deployment Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Computing Deployment Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-high-level-services-of-note" class="md-nav__link">
+    AWS - High Level Services Of Note*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zones-and-regions" class="md-nav__link">
+    Zones and Regions
+  </a>
+  
+    <nav class="md-nav" aria-label="Zones and Regions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-the-right-aws-region" class="md-nav__link">
+    Choosing the right AWS region
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-plans" class="md-nav__link">
+    Support Plans
+  </a>
+  
+    <nav class="md-nav" aria-label="Support Plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    Basic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developer" class="md-nav__link">
+    Developer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business" class="md-nav__link">
+    Business
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprise" class="md-nav__link">
+    Enterprise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-s3" class="md-nav__link">
+    What is S3
+  </a>
+  
+    <nav class="md-nav" aria-label="What is S3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-service-storage-s3" class="md-nav__link">
+    Simple Service Storage (S3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple Service Storage (S3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-need-to-know-exam-tips" class="md-nav__link">
+    S3 NEED TO KNOW Exam Tips
+  </a>
+  
+    <nav class="md-nav" aria-label="S3 NEED TO KNOW Exam Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-has-the-following-features" class="md-nav__link">
+    S3 has the following features
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-storage-classes" class="md-nav__link">
+    S3 Storage Classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-you-charged-for-with-s3" class="md-nav__link">
+    What are you charged for with S3?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-transfer-acceleration" class="md-nav__link">
+    S3 Transfer Acceleration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricting-access-in-s3" class="md-nav__link">
+    Restricting ACCESS in S3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-cloudfront" class="md-nav__link">
+    What is CloudFront
+  </a>
+  
+    <nav class="md-nav" aria-label="What is CloudFront">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-distributions" class="md-nav__link">
+    Types of distributions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2-elastic-compute-cloud" class="md-nav__link">
+    EC2 Elastic Compute Cloud
+  </a>
+  
+    <nav class="md-nav" aria-label="EC2 Elastic Compute Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec2-pricing-models" class="md-nav__link">
+    EC2 Pricing Models
+  </a>
+  
+    <nav class="md-nav" aria-label="EC2 Pricing Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#silly-acronym-to-remember-ec2-types-fight-dr-mcpxz" class="md-nav__link">
+    Silly Acronym To Remember EC2 Types : FIGHT DR MCPXZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-ebs" class="md-nav__link">
+    What is EBS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load-balancers" class="md-nav__link">
+    Load Balancers
+  </a>
+  
+    <nav class="md-nav" aria-label="Load Balancers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-load-balancers" class="md-nav__link">
+    Application Load Balancers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-load-balancers" class="md-nav__link">
+    Network Load Balancers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classic-load-balancers" class="md-nav__link">
+    Classic Load Balancers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    Databases
+  </a>
+  
+    <nav class="md-nav" aria-label="Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-relational-database-on-aws" class="md-nav__link">
+    NON-Relational Database on AWS
+  </a>
+  
+    <nav class="md-nav" aria-label="NON-Relational Database on AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#online-transaction-processing-oltp" class="md-nav__link">
+    Online Transaction Processing (OLTP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-analytics-processing-olap" class="md-nav__link">
+    Online Analytics Processing (OLAP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-warehouse" class="md-nav__link">
+    Data-warehouse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticache" class="md-nav__link">
+    ElastiCache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route-53" class="md-nav__link">
+    Route 53
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-beanstalk" class="md-nav__link">
+    Elastic BeanStalk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudformation" class="md-nav__link">
+    CloudFormation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightsail" class="md-nav__link">
+    Lightsail
+  </a>
+  
+    <nav class="md-nav" aria-label="Lightsail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#popular-exam-questions" class="md-nav__link">
+    POPULAR EXAM QUESTIONS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-database" class="md-nav__link">
+    Graph database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-services" class="md-nav__link">
+    Global Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwatch" class="md-nav__link">
+    Cloudwatch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capex-vs-opex" class="md-nav__link">
+    CAPEX vs. OPEX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-policies" class="md-nav__link">
+    Pricing Policies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-drivers-of-cost-with-aws" class="md-nav__link">
+    Fundamental Drivers Of Cost With AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-free-services" class="md-nav__link">
+    AWS FREE Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2-pricing" class="md-nav__link">
+    EC2 Pricing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-cost-explorer" class="md-nav__link">
+    AWS Cost Explorer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-waf-aws-shield" class="md-nav__link">
+    AWS WAF &amp; AWS Shield
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/hasanaburayyan/aws-cert-training/edit/master/docs/practitioner/practitioner-notes.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="aws-practitioner-notes">AWS Practitioner Notes</h1>
+<h2 id="six-advantages-of-cloud-computing">Six Advantages Of Cloud Computing</h2>
+<ol>
+<li>
+<p>Trade Capital Expense for variable expense
+Instead of investing heavily in data centers and servers before you use them you can pay for how much you are gonna use. </p>
+</li>
+<li>
+<p>Benefit from massive economies of scale
+you will never have the same purchasing power as Amazon.</p>
+</li>
+<li>
+<p>Stop guessing about capacity
+don't buy too much or too little.</p>
+</li>
+<li>
+<p>Increase speed and agility
+A cloud Guru platform was built in 3 weeks, using a new type of design called serverless architecture. It scales infinitely with demand. </p>
+</li>
+<li>
+<p>Stop spending money running and maintaining data centers</p>
+</li>
+<li>
+<p>Go global in minutes</p>
+</li>
+</ol>
+<h2 id="infrastructure-as-a-service">Infrastructure As A Service</h2>
+<p>You manage the server which can be physical or virtual. As well as operating system, usually the data center provider will have no access to your server</p>
+<h2 id="platform-as-a-service">Platform As A Service</h2>
+<p>Someone else manages the underlying hardware and operating systems. You focus on applications, someone else worries about security patching, updates, maintenance etc.</p>
+<h2 id="software-as-a-service">Software As A Service</h2>
+<p>Think of Gmail. All you do is manage your inbox and google handles everything else.</p>
+<h2 id="cloud-computing-deployment-types">Cloud Computing Deployment Types</h2>
+<ul>
+<li>Public Cloud</li>
+<li>AWS, Azure, GCP</li>
+<li>Hybrid</li>
+<li>Mixture of public and private</li>
+<li>Private Cloud (On Premise)</li>
+<li>you host and manage it in your datacenters</li>
+</ul>
+<h3 id="aws-high-level-services-of-note">AWS - High Level Services Of Note*</h3>
+<ul>
+<li>AWS Global Infrastructure</li>
+<li>AWS Cost Management</li>
+<li>Compute</li>
+<li>Databases</li>
+<li>Migration &amp; Transfer</li>
+<li>Network &amp; Content Delivery</li>
+<li>Security, Identity, &amp; Compliance</li>
+<li>Storage</li>
+</ul>
+<h2 id="zones-and-regions">Zones and Regions</h2>
+<ul>
+<li>
+<p>Availability zone is datacenter
+( one or more discrete data center each with redundant power networking and connectivity housed in separate facilities)</p>
+</li>
+<li>
+<p>Region is geographical area consisting of 2 or more availability zones
+(is a physical location in the world which consists of two or more AZs)</p>
+</li>
+<li>
+<p>Edge locations are endpoints for AWS which are used for caching content. Typically this consists of CloudFront, Amazon's Content Delivery Network (CDN)</p>
+</li>
+<li>
+<p>GovClouds are operated by US citizens on US soil. Only government and private businesses that pass screening checks can use it.</p>
+</li>
+</ul>
+<h3 id="choosing-the-right-aws-region">Choosing the right AWS region</h3>
+<ol>
+<li>Data Sovereignty Laws</li>
+<li>Latency to end users</li>
+<li>AWS Services (US east-1 primary Region for releases)</li>
+</ol>
+<h2 id="support-plans">Support Plans</h2>
+<h3 id="basic">Basic</h3>
+<ul>
+<li>Free access to forums</li>
+</ul>
+<h3 id="developer">Developer</h3>
+<p>experimenting with AWS. One primary contact to ask technical questions through Support Center and get response within 12-24 hours during local business hours 29/month</p>
+<h3 id="business">Business</h3>
+<p>Production use of AWS - 24x7 support by phone and chat. 1-hour response time to urgent support cases and help with common third party software. Full access to AWS Trusted
+advisor for optimizing your AWS infrastructure and access to AWS Support API for automating your support cases 100/month</p>
+<h3 id="enterprise">Enterprise</h3>
+<p>Use Case: Mission-critical use of AWS
+Technical Account Manager (TAM) 15 minute response time.
+15k month</p>
+<h2 id="what-is-s3">What is S3</h2>
+<h3 id="simple-service-storage-s3">Simple Service Storage (S3)</h3>
+<ul>
+<li>one of the oldest services</li>
+<li>
+<p>Provides developers and IT teams with secure, durable, highly-scalable object storage. Amazon S3 is easy to use, with a simple web services interface to store and retrieve</p>
+</li>
+<li>
+<p>S3 is safe place to store files</p>
+</li>
+<li>Object-based storage</li>
+<li>
+<p>Block based storage would be for operating systems (NOT s3)</p>
+</li>
+<li>
+<p>Files can be from 0bytes to 5 TB</p>
+</li>
+<li>
+<p>Unlimited storage</p>
+</li>
+<li>
+<p>Files are stored in Buckets (Folders in cloud)</p>
+</li>
+<li>
+<p>S3 is a universal Namespace so name must be unique GLOBALLY</p>
+</li>
+<li>
+<p>will always be prefixed with https://s3-region...</p>
+</li>
+<li>
+<p>Objects are files that consist of:</p>
+</li>
+<li>Key (simply the name of the object)</li>
+<li>Value (Data that made up of sequence of Bytes)</li>
+<li>Version ID</li>
+<li>Metadata</li>
+<li>Subresources</li>
+<li>Access Control Lists</li>
+<li>Torrent</li>
+</ul>
+<h4 id="s3-need-to-know-exam-tips">S3 NEED TO KNOW Exam Tips</h4>
+<ul>
+<li>How does consistency work for S3 </li>
+<li>Read after Write consistency for PUTS of new Objects</li>
+<li>
+<p>Eventual Consistency for overwrite PUTS and DELETES (can take some time to propagate)</p>
+</li>
+<li>
+<p>If writing file, put a file into S3 you can immediately read that data.</p>
+</li>
+<li>
+<p>If you update existing file or delete file you may get an older version. Basically changes can take some time to propagate to S3</p>
+</li>
+<li>
+<p>S3 has following guarantees</p>
+</li>
+<li>99.99% availability for S3 platform But amazon only Gurantees 99.9% availability</li>
+<li>AMAZON does guarantee 99.999999999% durability (the 11 9's) So very unlikely to lose File</li>
+<li>To Calculate: Number of seconds in any given months and multiply it by 99.99%</li>
+</ul>
+<h5 id="s3-has-the-following-features">S3 has the following features</h5>
+<ul>
+<li>Tiered Storage Available</li>
+<li>Lifecycle Management</li>
+<li>Versioning </li>
+<li>Encryption</li>
+<li>Secure your data using Access Control Lists and Bucket Policies</li>
+</ul>
+<h3 id="s3-storage-classes">S3 Storage Classes</h3>
+<ul>
+<li>S3 - Standard (11 9's )</li>
+<li>S3 - IA (RAPID access)</li>
+<li>S3 - One Zone - IA</li>
+<li>S3 - Intelligent Tiering (using machine learning to determine what you need)</li>
+<li>S3 - Glacier (secure, durable low cost data archiving)</li>
+<li>S3 - Glacier Deep Archive (takes 12 hours to retrieve SUPER cheap)</li>
+</ul>
+<h3 id="what-are-you-charged-for-with-s3">What are you charged for with S3?</h3>
+<ul>
+<li>Storage</li>
+<li>Requests</li>
+<li>Storage Management pricing</li>
+<li>Data Transfer pricing</li>
+<li>Transfer Acceleration</li>
+<li>Cross Region Replication Pricing</li>
+</ul>
+<h3 id="s3-transfer-acceleration">S3 Transfer Acceleration</h3>
+<p>enables fast and secure transfers of files over long distances between your end users and s3 buckets.
+(Users upload to edge sites then use Amazon intranet to upload)</p>
+<h3 id="restricting-access-in-s3">Restricting ACCESS in S3</h3>
+<ol>
+<li>Use Bucket Policies - Applies across the whole bucket</li>
+<li>Object Policies - Applies to individual files</li>
+<li>IAM Policies to Users and Groups - applies to users and groups</li>
+</ol>
+<p>Static Websites can be hosted in S3 Buckets
+Dynamic Websites CANNOT be hosted in S3 Buckets
+S3 buckets scale dynamically</p>
+<h2 id="what-is-cloudfront">What is CloudFront</h2>
+<p>A content delivery network (CDN)</p>
+<p>works in 3 parts:</p>
+<ul>
+<li>Edge Location</li>
+<li>Origin</li>
+<li>Distribution (name given to CDN which consists of a collection of edge locations)</li>
+</ul>
+<p>First users asks for content from edge location then the edge location will go get file and server to user. Then any additional users get files from edge locations</p>
+<h3 id="types-of-distributions">Types of distributions</h3>
+<p>Web Distribution - Typically for Websites
+RTMP - Used for media streaming (CloudFront is discontinuing support for RTMP distributions on December 31, 2020. For more information, please read the announcement.)</p>
+<h2 id="ec2-elastic-compute-cloud">EC2 Elastic Compute Cloud</h2>
+<p>Oldest services
+Virtual server or servers in cloud.
+Web service that provides resizable compute capacity in the cloud. Amazon EC2 reduces the time required to obtain and boot new server instances to minutes
+allowing you to quickly scale capacity both up and down as your needs change</p>
+<h3 id="ec2-pricing-models">EC2 Pricing Models</h3>
+<ol>
+<li>On Demand (allows you to pay a fixed rate by the hour (or second) with no commitment)</li>
+<li>Reserved  (Provides you with a capacity reservation and offers a significant discount on the hourly charge for an instance. Contract terms are 1 or 3 years)</li>
+<li>Spot      ( Enables you to bid a price you want to pay for instance capacity)
+        NOTE: if amazon EC2 terminates spot instance because of pricing change during your hour of use you will NOT be charged however if you terminate the instance early 
+            you are charged for any hour which the instance ran.</li>
+<li>Dedicated Hosts (Physical EC2 server dedicated for your use.)</li>
+</ol>
+<h4 id="silly-acronym-to-remember-ec2-types-fight-dr-mcpxz">Silly Acronym To Remember EC2 Types : FIGHT DR MCPXZ</h4>
+<p>F - For FPGA
+I - FOR IOPS
+G - Graphics
+H - High Disk Throughput
+T - Cheap general purpose
+D - For Density
+R - For RAM
+M - Main choice for general purpose apps
+C - For Compute
+P - Graphics
+X - Extreme Memory
+Z - Extreme memory and CPU</p>
+<h2 id="what-is-ebs">What is EBS</h2>
+<p>Virtual Disk in The Cloud.</p>
+<p>Types:</p>
+<ul>
+<li>SSD</li>
+<li>General Purpose SSD (GP2) - balances price and performance for a wide variety of workloads</li>
+<li>Provisoned IOPS SSD (I01) - Highest performance SSD volume for mission-critical low-latency or high-throughput workloads</li>
+<li>THERE IS ALSO A (IO2)</li>
+<li>Magnetic</li>
+<li>Throughput Optimiazed HDD (ST1) - Low cost HDD volume designed for frequently accessed throughput-intense workloads.</li>
+<li>Cold HDD (SC1) - Lowest Cost HDD volume designed for less frequently accessed workloads</li>
+<li>Magnetic - Previous Generation</li>
+</ul>
+<h2 id="load-balancers">Load Balancers</h2>
+<h3 id="application-load-balancers">Application Load Balancers</h3>
+<p>Layer 7 aware (Meaning they can make intelligent decisions)</p>
+<h3 id="network-load-balancers">Network Load Balancers</h3>
+<p>Extreme Performance/Static IP Addresses</p>
+<h3 id="classic-load-balancers">Classic Load Balancers</h3>
+<p>Test &amp; Dev, Keep Costs Low</p>
+<h2 id="databases">Databases</h2>
+<ul>
+<li>Relational Databases on AWS - RDS:</li>
+<li>SQL Server</li>
+<li>Oracle</li>
+<li>MySQL Server</li>
+<li>PostgreSQL</li>
+<li>Aurora (amazon’s own)</li>
+<li>MariaDB</li>
+</ul>
+<p>Can have multiple availability zones.
+Can have Read Replicas for enhanced Performance</p>
+<p>Multiple AZ’s are for disaster recovery
+Read Replicas are to increase performance</p>
+<h3 id="non-relational-database-on-aws">NON-Relational Database on AWS</h3>
+<p>Columns in table can vary
+Previous columns will not affect other rows in the database
+Amazons NON-Relational Database is called DynamoDB</p>
+<h4 id="online-transaction-processing-oltp">Online Transaction Processing (OLTP)</h4>
+<ul>
+<li>Pulls up a row of data such as Name, Date, Address to deliver to, etc.</li>
+<li>Basically takes/inserts a row from database</li>
+</ul>
+<h4 id="online-analytics-processing-olap">Online Analytics Processing (OLAP)</h4>
+<ul>
+<li>Pulls huge number of records</li>
+<li>Massive performance needed</li>
+<li>Data warehouse created to solve this.</li>
+</ul>
+<h3 id="data-warehouse">Data-warehouse</h3>
+<p>Use different architecture
+Designed to handle large scale calculations of data away from the database so that database performance is not affected.
+AMAZON'S Redshift</p>
+<h3 id="elasticache">ElastiCache</h3>
+<ul>
+<li>Web service that makes it easy to deploy, operate and scale an in-memory cache in the cloud.</li>
+<li>Improve performance of web application</li>
+<li>Caches most common queries to return data to users.</li>
+<li>Takes massive load off database queires</li>
+<li>Comes in Memcached and Redis</li>
+</ul>
+<h2 id="route-53">Route 53</h2>
+<p>Amazon’s DNS service
+It is Global like IAM and S3
+Can direct traffic all over the world
+Can Register Domain Name</p>
+<h2 id="elastic-beanstalk">Elastic BeanStalk</h2>
+<p>Deploy Applications to cloud
+Need no knowledge on AWS just upload code
+FREE service (however resources provisioned are not)</p>
+<h2 id="cloudformation">CloudFormation</h2>
+<p>Its a service that allows you to model and setup AWS resources.
+Focus more on the application and not managing the resources
+Create templates to describe needed resources
+FREE service (however resources provisioned are not)</p>
+<h2 id="lightsail">Lightsail</h2>
+<p>Platform As A Service</p>
+<h3 id="popular-exam-questions">POPULAR EXAM QUESTIONS</h3>
+<ul>
+<li>Name All the Compute Services:</li>
+<li>EC2</li>
+<li>Elastic BeanStalk</li>
+<li>Lambda</li>
+<li>Lightsail</li>
+<li>Batch</li>
+<li>EC2 Image Builder</li>
+<li>AWS Outpost</li>
+<li>
+<p>Serverless application Repository</p>
+</li>
+<li>
+<p>Traditional Computing vs Cloud Computing</p>
+</li>
+<li>IT assets as Provisioned Resources</li>
+<li>Global, Available, and Scalable Capacity</li>
+<li>Higher level Managed Services</li>
+<li>Built in security</li>
+<li>Architecting For Cost</li>
+<li>Operations on AWS</li>
+</ul>
+<h3 id="graph-database">Graph database</h3>
+<p>Amazon Neptune is Amazon’s graph database</p>
+<h2 id="global-services">Global Services</h2>
+<ul>
+<li>IAM</li>
+<li>Route 53</li>
+<li>CloudFront</li>
+<li>SNS</li>
+<li>SES</li>
+<li>Give Global view BUT are regional</li>
+<li>S3</li>
+<li>AWS Services used on Premise</li>
+<li>Snowball (Typically 80 TB in size AWS ships to you and you ship back to move data)</li>
+<li>Snowball Edge (Similar however has CPU and can deploy lambda on premise)</li>
+<li>Storage Gateway (Stays on premise, allows caching files inside datacenter that replicates to S3)</li>
+<li>CodeDeploy (deploy applications on EC2 on premise)</li>
+<li>Opsworks (similar to elastic beanstalk. Used to deploy)</li>
+<li>IoT Greengrass (connects devices to AWS cloud)</li>
+</ul>
+<h2 id="cloudwatch">Cloudwatch</h2>
+<ul>
+<li>Monitor services for AWS resources and applications on AWS.</li>
+<li>Compute</li>
+<li>EC2 Instances </li>
+<li>Autoscaling Groups</li>
+<li>Elastic Load Balancers</li>
+<li>Route 53 Health checks</li>
+<li>Storage and content deliver</li>
+<li>EBS Volume</li>
+<li>Storage gateway</li>
+<li>Collectd type metrics</li>
+<li>Monitors every 5 mins by default</li>
+<li>Can trigger notifications</li>
+<li>Can change intervals for checks.</li>
+<li>AWS Systems Manager</li>
+<li>Monitor EC2 instances at scale, or allows you to monitor EC2 Fleet (many EC2s) Installs piece of software on each VM</li>
+<li>Use system manager to run command across ALL EC2 instances</li>
+<li>Also works on for on premise machines</li>
+<li>Integrates with cloudwatch to give dashboard for everything</li>
+</ul>
+<h2 id="capex-vs-opex">CAPEX vs. OPEX</h2>
+<p>Capex:</p>
+<ul>
+<li>Stands for Capital expenditure which is where you pay upfront and it is a fixed sunk in cost.</li>
+</ul>
+<p>Opex
+- Operational Expenditure which is where you pay for what you use.
+- Think about it like utilities (gas, electric)</p>
+<h2 id="pricing-policies">Pricing Policies</h2>
+<ul>
+<li>Pay as you go</li>
+<li>Pay less when you reserve</li>
+<li>Pay even less per unit when using more</li>
+<li>Pay even less as AWS gross</li>
+<li>Custom pricing</li>
+</ul>
+<h2 id="fundamental-drivers-of-cost-with-aws">Fundamental Drivers Of Cost With AWS</h2>
+<ul>
+<li>Compute</li>
+<li>Storage</li>
+<li>Data outbound</li>
+</ul>
+<h2 id="aws-free-services">AWS FREE Services</h2>
+<ul>
+<li>Amazon VPC</li>
+<li>Elastic Beanstalk</li>
+<li>Cloud Formation</li>
+<li>Identity Access Management (IAM)</li>
+<li>Auto Scaling</li>
+<li>Opsworks</li>
+<li>Consolidated Biling</li>
+</ul>
+<h2 id="ec2-pricing">EC2 Pricing</h2>
+<ul>
+<li>Clock Hours of Server Time</li>
+<li>Instance Type</li>
+<li>Pricing Model</li>
+<li>Number of Instances</li>
+<li>Load Balancing</li>
+<li>Detailed Monitoring</li>
+<li>Auto Scaling</li>
+<li>Elastic IP Addresses</li>
+<li>Operating Systems and Software Packages</li>
+<li>Pricing Models</li>
+<li>On Demand</li>
+<li>Reserved</li>
+<li>Spot</li>
+<li>Dedicated Hosts</li>
+<li>Lambda Pricing</li>
+<li>Request Pricing</li>
+<li>Free Tier: 1 million requests per month</li>
+<li>$0.20 per 1 mil</li>
+<li>AWS Budgets:</li>
+<li>Gives ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed your budgeted amount) </li>
+<li>Used to budget costs before they are incurred</li>
+</ul>
+<h2 id="aws-cost-explorer">AWS Cost Explorer</h2>
+<p>Explore costs that have been incurred over time.</p>
+<h2 id="tags">Tags</h2>
+<ul>
+<li>Key:Value pairs</li>
+<li>Metadata</li>
+<li>Tags can be inherited</li>
+<li>Specific Information</li>
+<li>Resource Groups objects that share one or more tags</li>
+<li>AWS Organizations &amp; Consolidated Billing</li>
+<li>AWSO an account management service, consolidates AWS</li>
+<li>Consolidated Billing</li>
+</ul>
+<h2 id="aws-waf-aws-shield">AWS WAF &amp; AWS Shield</h2>
+<ul>
+<li>WAF protections from common exploits (Hackers)</li>
+<li>Shield protects from DDos, two tiers (DDos)</li>
+<li>Standard - Free, comes with all deployments</li>
+<li>Advanced - adds reporting, support for DDoS attacks, and cost protection</li>
+<li>Amazon Inspector</li>
+<li>Automatically assesses application for security vulnerabilities or deviations from best practice.</li>
+<li>Trusted Advisor</li>
+<li>Provides real time guidance on provisioning resources according to AWS best practices.</li>
+<li>Advices on Optimization, Performance, Security, Fault Tolerance</li>
+<li>Core Check and Recommendations - Free</li>
+<li>Full Trusted Advisor - Business and Enterprise Only</li>
+<li>Athena, serverless query service</li>
+<li>Query logs</li>
+<li>Business reports</li>
+<li>AWS cost and usage reports</li>
+<li>Queries on click-stream data</li>
+<li>Macie uses AI protects PII, security service</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Lets Get Certified" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Lets Get Certified
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../associate/developer/developer-notes/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS Associate Developer Notes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              AWS Associate Developer Notes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>
