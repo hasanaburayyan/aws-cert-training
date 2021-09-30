@@ -1,0 +1,26 @@
+# X-Ray
+
+- X-Ray is a service that collects data about requests that you application serves
+- Visualize serverless application
+- See detailed information about any TRACE request to application and downstream services that get used
+- How to use:
+  - Install X-Ray SDK in code
+  - SDK will then send JSON information to the X-Ray Daemon
+  - The Daemon will then send data to the X-Ray API
+- SDK gives you
+  - Interceptors to add to your code to trace incoming HTTP requests
+  - Client handlers to instrument AWS SDK clients that your application uses to call other AWS services
+  - A HTTP client to use  to instrument calls to other internal and external HTTP web services
+- Integration
+  - Elastic Load Balancing
+  - AWS Lambda
+  - Amazon API Gateway
+  - Amazon Elastic Compute Cloud
+  - AWS Elastic Beanstalk
+- Languages Supported
+  - Java
+  - Go
+  - Node js
+  - Python
+  - Ruby
+  - .NET

@@ -1,0 +1,51 @@
+# CloudFront
+
+## Content Delivery Network (CDN)
+
+- A system of distributed servers (network) that deliver webpages and other web content to a user based on geographic locations of the user, the origin of the webpage, and a content deliver server
+- Basically speeds up delivery of web content
+- Content Delivery vs. Transfer Acceleration
+  - CDN focus on download
+  - Transfer Acceleration is upload
+- Scenario
+  - Website in UK
+  - Users in America, South America, South Africa, Austrailia, India
+    - Users further from UK can experience greater latency and less responsiveness
+  - We use edge locations to keep copy of website in edge locations which are much closer to users.
+    - First time user requests resource edge location makes request to server in UK and downloads the resource
+    - resource is then cached so that subsequent requests for that item will be served to user from edge location
+    - cache is temporary and will be cleared after a time period
+    - cache can be cleared manually but there will be a fee to do so
+      - This may be done if you need users to be given most recent updates
+- Key Terminology
+  - Edge Location
+    - Location where content is cached and can also be written (Not a region or AZ)
+    - More edge locations than AZs or Regions (edge locations > AZs > Regions)
+  - Origin
+    - The origin of all the files that the CDN will be distributing
+    - Can be S3 Bucket, EC2 Instance, Elastic Load Balancer, or Route53
+  - Distribution
+    - The name given to CDN which consist of collection of edge locations
+  - Web Distribution
+    - Typically used for websites
+  - RTMP
+    - Used for Media Streaming
+- Cloud Front can be used to deliver the ENTIRE website including the following content
+  - dynamic
+  - static
+  - streaming
+  - interactive
+- Can be used with NON AWS servers
+- Distribution Types
+  - Web Distribution
+    - Used for Websites, HTTP/HTTPS
+    - Can NOT serve Adobe flash mutli media content
+  - RTMP Distribution (Adobe Real Time Messaging Protocol)
+    - Media streaming
+    - Flash multi-media content
+- CloudFront can be used for Transfer Acceleration for uploading files to S3
+- You can restrict access to certain (paying usings) by using signed URL or signed cookies
+- Can use WAF to protect at application layer
+- Can use whitelist and blacklist to restrict access to countries
+- Cache can be cleared by invalidating objects (which you will be charged for)
+- CloudFront can be used to upload files as well as download files.

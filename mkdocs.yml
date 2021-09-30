@@ -4,15 +4,54 @@ site_description: All you AWS Training notes in 1 place!
 repo_url: https://github.com/hasanaburayyan/aws-cert-training
 theme:
     name: material
-nav: 
-  - 'index.md'
-  - 'practitioner/practitioner-notes.md'
-  - 'associate/developer/developer-notes.md'
+    features:
+      - navigation.sections
+      - navigation.indexes
+      - navigation.top
+      - toc.integrate
+nav:
+  - 'index.md' 
+  - AWS Practitioner:
+    - Advantages Of Cloud: 'practitioner/advantages-of-cloud.md'
+    - Support Plans: 'practitioner/support-plans.md'
+    - Zones And Regions: 'practitioner/zones-and-regions.md'
+    - Intro To:
+      - EC2: 'practitioner/ec2.md'
+      - EBS: 'practitioner/ebs.md'
+      - S3: 'practitioner/s3.md'
+      - Cloud Front: 'practitioner/cloudfront.md'
+      - Databases: 'practitioner/databases.md'
+      - Elastic Beanstalk: 'practitioner/elastic-beanstalk.md'
+      - Light Sail: 'practitioner/lightsail.md'
+      - Load Balancers: 'practitioner/load-balancers.md'
+      - Route 53: 'practitioner/route53.md'
+      - WAF: 'practitioner/waf.md'
+    - Cloud Formation: 'practitioner/cloudformation.md'
+    - Tags: 'practitioner/tags.md'
+    - Exam Tips: 'practitioner/exam-tip.md'
+  - AWS Certified Developer:
+    - Services:
+      - IAM: 'associate/developer/iam.md'
+      - EC2: 'associate/developer/ec2.md'
+      - EBS: 'associate/developer/ebs.md'
+      - S3: 'associate/developer/s3.md'
+      - ELB: 'associate/developer/elb.md'
+      - API Gateway: 'associate/developer/api-gateway.md'
+      - CouldFront: 'associate/developer/cloudfront.md'
+      - DynamoDB: 'associate/developer/dynamodb.md'
+      - KMS: 'associate/developer/kms.md'
+      - Lambda: 'associate/developer/lambda.md'
+      - Relational Databases: 'associate/developer/rds.md'
+      - Route 53: 'associate/developer/route53.md'
+      - Serverless: 'associate/developer/serverless.md'
+      - Step Functions: 'associate/developer/step-functions.md'
+      - X-Ray: 'associate/developer/xray.md'
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.tabbed
+  - toc:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

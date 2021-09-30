@@ -1,0 +1,29 @@
+# Elastic Load Balancers
+
+- Balances loads between multiple web servers
+- Types:
+  - Application Load Balancer
+    - Application layer 7 OSI
+    - â€œSmart Decisionsâ€
+    - Can see what request is doing to determine what needs done with request
+    - Can create advanced request routing
+    - Best suited for load balancing of HTTP and HTTPS
+  - Network Load Balancer
+    - Layer 4
+    - Super Fast performance
+    - Best suited for TCP traffic
+    - Capable of handling millions of requests per seconds
+    - Use for extreme performance
+    - Most expensive
+  - Classic Load Balancer
+    - Not Recommended
+    - Legacy Purposes
+    - Tested on exam alot
+    - Meant for Legacy HTTP/HTTPS
+    - Sticky Sessions and X-Forwarded
+    - Can do layer 7 or layer 4
+    - Load Balancer Errors:
+      - Error 504 Gateway has timed out if your application stops with 504 that means the application is having issues. This could be either at Web Server layer or at Database Layer.
+  - X-Forwarded-For Header:
+    - User (123.45.6.789) -> Load balancer (10.0.0.23) -> EC2 (10.0.0.23)
+      - The user sends a request to load balancer, load balancer does not use the user's public IP it hits the private IP for EC2 and the EC2 sees the private IP. If we want to know the IP the request came from we need to look in the header for the â€œX-Forwarded-Forâ€

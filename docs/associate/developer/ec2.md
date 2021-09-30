@@ -1,0 +1,65 @@
+# EC2
+
+- Elastic Compute Cloud (EC2)
+- Secure, resizable compute capacity in the Cloud
+- Basically VM hosted in AWS
+- Designed to make web scale cloud computing easier
+- Capacity when you need it and complete control
+- History:
+  - Game Changer when it was introduced.
+  - Pay only what you use
+  - No Wasted Capacity (Grow and Shrink when needed)
+  - Prior to EC2 (Capacity Estimates, Long term investment, 3-5 years)
+- Servers Running in Minutes NOT Months.
+- Pricing Models:
+  - On Demand (Pay For Time Running)
+    - Flexible
+    - Short-Term
+    - Testing The Water.
+  - Reserved Instances (Reserve capacity for 1-3 years BIG discount. Up to 72%)
+    - Predictable Usage (steady state)
+    - Specific Capacity Requirements
+    - Pay Up-Front
+    - Standard RIs (Claim 72% off)
+      - Cannot Change Instance Size Later
+    - Convertible RIs
+      - Up to 54% off.
+      - Option to convert to other instance type of equal or greater value
+    - Scheduled RIs
+      - Launch within time window you define
+        - Match capacity reservation time frame
+        - Use RIs during your busy time
+  - Spot (Purchase unused capacity at discount of 90% Prices. Process can be interrupted)
+    - Applications that have flexible start and end times
+    - Applications that are feasible at very low compute prices
+    - Users with an urgent need for large amounts of additional computing capacity
+  - Dedicated (Physical EC2 server dedicated for your use. Good for software license restriction. Also most expensive)
+    - Application with Compliance requirement that does not support multi-tenant virtualization
+    - Purchase Plans:
+      - On-Demand
+      - Reserved
+  - Saving Plans:
+    - Save up to 72% when paying for All AWS Compute usage, regardless of instance type or Region
+    - Commit To One or Three Years
+    - Super Flexible (Not only for EC2)
+- EC2 Instance Types:
+  - Stats of Instance Type
+    - Hardware
+    - Capabilities
+      - CPU
+      - Memory
+      - Storage
+  - Instance Types are optimized to fit different use cases
+  - Acryonym To Remember Types FIGHT DR MCPXZ
+    - **F** - For FPGA
+    - **I** - FOR IOPS
+    - **G** - Graphics
+    - **H** - High Disk Throughput
+    - **T** - Cheap general purpose
+    - **D** - For Density
+    - **R** - For RAM
+    - **M** - Main choice for general purpose apps
+    - **C** - For Compute
+    - **P** - Graphics
+    - **X** - Extreme Memory
+    - **Z** - Extreme memory and CPU
