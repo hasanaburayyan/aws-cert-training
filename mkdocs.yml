@@ -47,6 +47,19 @@ nav:
       - Serverless: 'associate/developer/serverless.md'
       - Step Functions: 'associate/developer/step-functions.md'
       - X-Ray: 'associate/developer/xray.md'
+  - AWS Solutions Architect I:
+    - Fundamentals: 'associate/architect/fundementals.md'
+    - Shared Responsibility: 'associate/architect/shared-responsibility.md'
+    - Well Architected: 'associate/architect/well-architected.md'
+    - Key Concepts:
+      - Compute: 'associate/architect/compute.md'
+      - Databases: 'associate/architect/databases.md'
+      - Networking: 'associate/architect/networking.md'
+      - Storage: 'associate/architect/storage.md'
+    - Services:
+      - IAM: 'associate/architect/iam.md'
+      - S3: 'associate/architect/s3.md'
+      - EC2: 'associate/architect/ec2.md'
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
