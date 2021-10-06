@@ -2,167 +2,217 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/compute/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/databases/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/ec2/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/fundementals/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/iam/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/networking/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/s3/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/shared-responsibility/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/storage/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/architect/well-architected/</loc>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/api-gateway/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/cloudfront/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/dynamodb/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/ebs/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/ec2/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/elb/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/iam/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/kms/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/lambda/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/rds/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/route53/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/s3/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/serverless/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/step-functions/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/associate/developer/xray/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/advantages-of-cloud/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/cloudformation/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/cloudfront/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/cloudwatch/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/databases/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/ebs/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/ec2/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/elastic-beanstalk/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/exam-tip/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/lightsail/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/load-balancers/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/route53/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/s3/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/support-plans/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/tags/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/waf/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hasanaburayyan.github.io/aws-cert-training/practitioner/zones-and-regions/</loc>
-         <lastmod>2021-09-30</lastmod>
+         <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
